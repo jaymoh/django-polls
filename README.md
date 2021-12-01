@@ -23,9 +23,12 @@ INSTALLED_APPS = [
    'polls',
    ]
 ``
+
+
 2. Include the polls `URLconf` in your project `urls.py` like this:
 
 ```path('polls/', include('polls.urls')),```
+
 
 3. To create the polls models, run the command below: 
 
@@ -34,6 +37,7 @@ INSTALLED_APPS = [
 4. To start the development server, run the command below: 
 
 ```python manage.py runserver```
+
 
 5. Once your server is up, visit the admin interface at <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/ </a> to create a poll.
 
