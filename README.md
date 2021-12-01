@@ -1,4 +1,4 @@
-#Django Tutorial Polls App
+# Django Tutorial Polls App
 
 This repository contains the complete code for the <a href="https://www.djangoproject.com/">Django </a> Framework's <a href="https://docs.djangoproject.com/en/3.2/intro/tutorial01/"> Polls App</a> tutorial. 
 
