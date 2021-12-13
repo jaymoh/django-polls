@@ -1,0 +1,16 @@
+DJANGO_SECRET_KEY=your_secret_key
+DEBUG=True
+DJANGO_LOGLEVEL=info
+DJANGO_ALLOWED_HOSTS=your_server_IP_address
+
+DB_ENGINE=postgresql_psycopg2
+DB_DATABASE=polls_db
+DB_USERNAME=hackins
+DB_PASSWORD=your_database_password
+DB_HOST=your_database_host
+DB_PORT=your_database_port
+
+STATIC_DEFAULT_FILE_STORAGE=storages.backends.gcloud.GoogleCloudStorage
+STATIC_GS_BUCKET_NAME=your_google_cloud_storage_bucket_name
+GOOGLE_APPLICATION_CREDENTIALS=path/to/your/gcloud_service_account_key_json_file
+STATIC_ENDPOINT_URL=https://storage.googleapis.com
