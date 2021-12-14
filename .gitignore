@@ -1,3 +1,4 @@
 /.env
 /gcs_iam_key.json
 /django-polls/gcs_iam_key.json
+/.idea/

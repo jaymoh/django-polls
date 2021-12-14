@@ -1,5 +1,7 @@
 # Django Tutorial Polls App
 
+#### This branch (django-polls-docker) includes dockerization implementations (It includes the Dockerfile, and moves some settings configuration values to env file to prepare for Docker container deployment). 
+
 This repository contains the complete code for the <a href="https://www.djangoproject.com/">Django </a> Framework's <a href="https://docs.djangoproject.com/en/3.2/intro/tutorial01/"> Polls App</a> tutorial. 
 
 It includes minor configurations in the `settings.py` file to use `PostgresSQL` database installed locally instead of the `SQLite` database used in the Django tutorial. 

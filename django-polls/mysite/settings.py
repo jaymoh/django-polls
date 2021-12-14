@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import json
 import os
 from pathlib import Path
+import json
+from google.oauth2 import service_account
 import logging.config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -125,7 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 GOOGLE_APPLICATION_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
-GS_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    GOOGLE_APPLICATION_CREDENTIALS
+)
 GS_BUCKET_NAME = os.getenv('STATIC_GS_BUCKET_NAME')
 
 DEFAULT_FILE_STORAGE = os.getenv('STATIC_DEFAULT_FILE_STORAGE', 'storages.backends.gcloud.GoogleCloudStorage')
