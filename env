@@ -1,16 +1,16 @@
-DJANGO_SECRET_KEY=your_secret_key
+DJANGO_SECRET_KEY=czu5p&h!fe21=!^zk$^5gw+=mwo8j+7($3a1p-qfp&yg6qxhtx
 DEBUG=True
 DJANGO_LOGLEVEL=info
-DJANGO_ALLOWED_HOSTS=your_server_IP_address
+DJANGO_ALLOWED_HOSTS=45.77.141.88
 
 DB_ENGINE=postgresql_psycopg2
-DB_DATABASE=polls_db
-DB_USERNAME=hackins
-DB_PASSWORD=your_database_password
-DB_HOST=your_database_host
-DB_PORT=your_database_port
+DB_DATABASE=django_polls
+DB_USERNAME=django_user
+DB_PASSWORD=123hacks()
+DB_HOST=95.179.247.218
+DB_PORT=5432
 
 STATIC_DEFAULT_FILE_STORAGE=storages.backends.gcloud.GoogleCloudStorage
-STATIC_GS_BUCKET_NAME=your_google_cloud_storage_bucket_name
-GOOGLE_APPLICATION_CREDENTIALS=path/to/your/gcloud_service_account_key_json_file
+STATIC_GS_BUCKET_NAME=cloudsigma-django-bucket
+GOOGLE_APPLICATION_CREDENTIALS=/gcp/gcs_iam_credentials.json
 STATIC_ENDPOINT_URL=https://storage.googleapis.com

@@ -2,11 +2,13 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import dotenv
+import dotenv # comment out this line when working with docker
 
 def main():
     """Run administrative tasks."""
-    dotenv.read_dotenv()
+    dotenv.read_dotenv() # comment out this line before running docker build,
+    # it's only useful for local development outside a docker container
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
     try:
         from django.core.management import execute_from_command_line
