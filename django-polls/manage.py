@@ -2,12 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import dotenv # comment out this line when working with docker
+import dotenv
+
 
 def main():
     """Run administrative tasks."""
-    dotenv.read_dotenv() # comment out this line before running docker build,
-    # it's only useful for local development outside a docker container
+    # todo: Comment out this line before running docker build,
+    # It's only useful for local development outside a docker container
+    # dotenv.read_dotenv('/home/shisiah/PycharmProjects/django_project/.env')
 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
     try:

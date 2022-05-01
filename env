@@ -1,5 +1,5 @@
 DJANGO_SECRET_KEY=your_secret_key
-DEBUG=True
+DEBUG=
 DJANGO_LOGLEVEL=info
 DJANGO_ALLOWED_HOSTS=your_server_IP_address
 
@@ -10,8 +10,9 @@ DB_PASSWORD=your_database_password
 DB_HOST=your_database_host
 DB_PORT=your_database_port
 
-STATIC_DEFAULT_FILE_STORAGE=storages.backends.gcloud.GoogleCloudStorage
-STATIC_GS_BUCKET_NAME=your_google_cloud_storage_bucket_name
-GOOGLE_APPLICATION_CREDENTIALS=/gcp/gcs_iam_credentials.json
+STATIC_DEFAULT_FILE_STORAGE=storages.backends.s3boto3.S3Boto3Storage
+STATIC_MINIO_BUCKET_NAME=test-bucket
 
-STATIC_ENDPOINT_URL=https://storage.googleapis.com
+MINIO_ACCESS_KEY=your_minio_access_key
+MINIO_SECRET_KEY=your_minio_secret_key
+MINIO_URL=your_minio_url:your_minio_port

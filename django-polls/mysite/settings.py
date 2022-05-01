@@ -125,26 +125,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-GOOGLE_APPLICATION_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
-GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
-    GOOGLE_APPLICATION_CREDENTIALS
-)
-GS_BUCKET_NAME = os.getenv('STATIC_GS_BUCKET_NAME')
+DEFAULT_FILE_STORAGE = os.getenv('STATIC_DEFAULT_FILE_STORAGE', 'storages.backends.s3boto3.S3Boto3Storage')
 
-DEFAULT_FILE_STORAGE = os.getenv('STATIC_DEFAULT_FILE_STORAGE', 'storages.backends.gcloud.GoogleCloudStorage')
-GS_ENDPOINT_URL = os.getenv('STATIC_ENDPOINT_URL')
+AWS_S3_ENDPOINT_URL = os.getenv('MINIO_URL')
 
-GS_OBJECT_PARAMETERS = {
-    'cache_control': 'max-age=86400',
+AWS_ACCESS_KEY_ID = os.getenv('MINIO_ACCESS_KEY')
+
+AWS_SECRET_ACCESS_KEY = os.getenv('MINIO_SECRET_KEY')
+
+AWS_STORAGE_BUCKET_NAME = os.getenv('STATIC_MINIO_BUCKET_NAME')
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
 }
 
-GS_LOCATION = 'static'
-GS_DEFAULT_ACL = 'publicRead'
+AWS_LOCATION = 'static'
+AWS_DEFAULT_ACL = 'public-read'
 
-STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-STATIC_URL = '{}/{}/'.format(GS_ENDPOINT_URL, GS_LOCATION)
-STATIC_ROOT = 'static/'
+STATIC_URL = '{}/{}/'.format(AWS_S3_ENDPOINT_URL, AWS_LOCATION)
+STATIC_ROOT = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
