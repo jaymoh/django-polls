@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 import json
-from google.oauth2 import service_account
 import logging.config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
